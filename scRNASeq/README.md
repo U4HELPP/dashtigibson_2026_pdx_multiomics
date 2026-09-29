@@ -13,10 +13,11 @@ Note that the "multipletR_historical" step utilized code from the following repo
 This repo is being release only because this is the code used for this manuscript.  
 The multipletR tool has been revised and is being published under a different repository (will update link when available).
 
-![Single-cell pipeline diagram](scRNASeq_pipeline_diagram.drawio.png)
+<p align="center">
+  <img src="scRNASeq_pipeline_diagram.drawio.png" alt="Single-cell pipeline diagram" width="500">
+</p>
 
 Editable source: `scRNASeq_pipeline_diagram.drawio`
----
 
 ## Barnyard Pipeline
 *Mixed human/mouse PDX samples; no wet-lab mouse depletion (or depletion incomplete).*
