@@ -4,15 +4,18 @@
 
 ## Purpose
 
-Documents the exact processing steps used for single-cell RNA-seq samples in the PDX multi-omics manuscript (*Pan-cancer comparisons of multi-omics data for therapeutic selection*, Dashti-Gibson et al.). Sample routing between the two pipelines below is tracked in the sample sheet.
+Documents the exact processing steps used for single-cell RNA-seq samples in the PDX multi-omics manuscript (*Pan-cancer comparisons of multi-omics data for therapeutic selection*, Dashti-Gibson et al.). 
+All code used for single cell processing exists in other repos. This README provides a map to those repos and described the full pipeline.
+The full sample sheet is provided for reference as it defines the routing between the two pipelines described below for each sample.
 
-Two pipelines were used, depending on whether wet-lab mouse-cell depletion was performed on a given sample. See `pipeline_diagram.drawio` for a visual flowchart of both.
-
-> **Note:** 2 samples that underwent mouse depletion were nonetheless routed through the Barnyard Pipeline, because depletion was incomplete for those samples. This is flagged in the sample sheet.
+Two pipelines were used, depending on whether wet-lab mouse-cell depletion was performed on a given sample (see below). 
+Note that the "multipletR_historical" step utilized code from the following repo: https://github.com/U4HELPP/multipletR_historical/
+This repo is being release only because this is the code used for this manuscript.  
+The multipletR tool has been revised and is being published under a different repository (will update link when available).
 
 ![Single-cell pipeline diagram](scRNASeq_pipeline_diagram.drawio.png)
 
-*Editable source: `scRNASeq_pipeline_diagram.drawio`*
+Editable source: `scRNASeq_pipeline_diagram.drawio`
 ---
 
 ## Barnyard Pipeline
