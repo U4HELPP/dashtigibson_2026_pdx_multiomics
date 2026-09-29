@@ -30,6 +30,7 @@ Editable source: `scRNASeq_pipeline_diagram.drawio`
 | 5 | [`02_runCellRanger.sh`](https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/v1.0.0/SingleCell/02_runCellRanger.sh) *(rerun, human-only reference, `-F` force-cells flag)* | Human-only FastQ + human reference (GRCh38) | BAM, filtered_feature_bc_matrix |
 | 6 | [`DeadCellAnalysis_042220.R`](https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/v1.0.0/SingleCell/DeadCellAnalysis_042220.R) | filtered_feature_bc_matrix | List of barcodes to keep |
 | 7 | [`SeuratMerge_100322.R`](https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/v1.0.0/SingleCell/SeuratMerge_100322.R) *(no ambient RNA removal)* | Barcodes to keep + filtered_feature_bc_matrix + sample annotation sheet | Loupe Browser file, RDS object |
+| 8 | [`Pseudobulk_PAM50_subtyping_091123.R`](https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/SingleCell/Pseudobulk_PAM50_subtyping_091123.R) | Merged RDS object | Sample-level subtype CSV |
 
 ## Human-Only Pipeline
 *Mouse-depleted samples; species separation skipped.*
@@ -40,3 +41,4 @@ Editable source: `scRNASeq_pipeline_diagram.drawio`
 | 2 | [`02_runCellRanger.sh`](https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/v1.0.0/SingleCell/02_runCellRanger.sh) | FastQ + human reference (GRCh38) | BAM, filtered_feature_bc_matrix |
 | 3 | [`DeadCellAnalysis_042220.R`](https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/v1.0.0/SingleCell/DeadCellAnalysis_042220.R) | filtered_feature_bc_matrix | List of barcodes to keep |
 | 4 | [`SeuratMerge_100322.R`](https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/v1.0.0/SingleCell/SeuratMerge_100322.R) *(includes SoupX ambient RNA removal)* | Barcodes to keep + filtered_feature_bc_matrix + sample annotation sheet | Loupe Browser file, RDS object |
+| 5 | [`Pseudobulk_PAM50_subtyping_091123.R`](https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/SingleCell/Pseudobulk_PAM50_subtyping_091123.R) | Merged RDS object | Sample-level subtype CSV |
