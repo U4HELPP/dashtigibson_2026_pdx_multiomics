@@ -65,9 +65,7 @@ Code included directly in this repository is covered by this repository's licens
 ## 7. scRNA-Seq Analysis
 - **Status:** Needs organizing (alignment/clustering) / Included-pending-copy (cell filtering, merging, pseudobulk)
 - **Location:**
-  - Alignment & clustering scripts (needs organizing): https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/tree/master/SingleCell
-  - Cell-level filtering: https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/SingleCell/DeadCellAnalysis_042220.R
-  - Sample merging and clustering: https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/SingleCell/SeuratMerge_100322.R
+  - Alignment, cell-level filtering and sample merging are described here: https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/scRNASeq 
   - Pseudobulk PAM50 subtyping: https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/SingleCell/Pseudobulk_PAM50_subtyping_091123.R
 - **Contributor(s):** Amy Olex
 - **Notes:** Alignment/cluster scripts exist but are scattered across the linked directory and need to be organized before (or instead of) copying into this repo.
