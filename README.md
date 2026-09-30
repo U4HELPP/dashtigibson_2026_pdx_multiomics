@@ -70,7 +70,8 @@ Code included directly in this repository is covered by this repository's licens
 - **Notes:** Organization completed
 
 ## 8. Drug Response Prediction Modeling
-- **Status:** Pending
-- **Location:** TBD
-- **Contributor(s):** TBD — contributor to confirm
+- **Status:** Completed
+- **Location:**
+    - Code, model run, and results are described here: https://github.com/huynhkl953/2026_pdx_multiomics_drug_model
+- **Contributor(s):** Khoa Huynh
 - **Notes:**
