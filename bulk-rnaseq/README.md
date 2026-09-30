@@ -16,7 +16,7 @@ Documents the processing steps used for bulk RNA-seq samples in the PDX multi-om
 |---|---|---|---|
 | 1 | [jds-nf-workflows](https://github.com/TheJacksonLaboratory/jds-nf-workflows) *(JAX PDX Nextflow pipeline; see [protocol](https://github.com/VCU-Bioinformatics-Core/bioinformatics-epicenter-pipelines/wiki/RNA-seq-Step-by-Step-Guide) for step-by-step usage)* | Raw bulk RNA-seq FastQ files | QC reports, alignments, human/mouse gene and isoform count files |
 | 2 | [`merge_counts`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/merge_counts) *(SOP v1.1 release)* | JAX per-sample count files (see directory structure below) | Single merged count matrix |
-| 3 | [`analysis`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/analysis) | Merged count matrix | PCA plots, PLS-DA analysis, downstream results |
+| 3 | [`analysis`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/analysis) | Merged count matrix | PAM50 subtyping, PCA plots, PLS-DA analysis, downstream results |
 
 ## Merge Step — Required Directory Structure
 
@@ -42,6 +42,13 @@ jaxresults/
 | `merge_rsem_data_250108.sh` | Template script (cluster-specific info stripped) containing the merge commands for each file type (gene counts, isoform counts, TPM, etc.), called automatically at the end of `link_jax_results.sh`. |
 | [`merge_jax_counts.R`](https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/WorkstationScripts/merge_jax_counts.R) *(WCCTR_RNASeq_Pipeline repo)* | Performs the actual merging of per-sample count files into the single merged count matrix; called by `merge_rsem_data_250108.sh`. |
 
+## Analysis
+ 
+| Step | Tool/Script | Description |
+|---|---|---|
+| 1 | [`06_PAM50_subtyping.R`](https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/WorkstationScripts/06_PAM50_subtyping.R) *(WCCTR_RNASeq_Pipeline repo)* | PAM50 classification |
+ 
+
 ## Referenced URLs
 
 | Reference | URL |
@@ -51,3 +58,4 @@ jaxresults/
 | `bulk-rnaseq/merge_counts` (SOP v1.1 release) | https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/merge_counts |
 | `bulk-rnaseq/analysis` | https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/analysis |
 | `merge_jax_counts.R` (WCCTR_RNASeq_Pipeline repo) | https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/WorkstationScripts/merge_jax_counts.R |
+| `06_PAM50_subtyping.R` (WCCTR_RNASeq_Pipeline repo) | https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/WorkstationScripts/06_PAM50_subtyping.R |
