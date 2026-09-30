@@ -35,10 +35,11 @@ Code included directly in this repository is covered by this repository's licens
 - **Notes:** Nina will provide the PCA/PLS-DA scripts. SOP repo needs visibility changed to public before publication.
 
 ## 3. Proteomics Analysis
-- **Status:** Pending
-- **Location:** TBD
-- **Contributor(s):** TBD — contributor to confirm
-- **Notes:**
+- **Status:** Completed
+- **Location:** https://github.com/Alexa-Barber/U54_Proteomic_Workflows
+- **Version/Release:** [v1.0](https://github.com/Alexa-Barber/U54_Proteomic_Workflows/releases/tag/v1.0)
+- **Contributor(s):** Alexa Barber
+- **Notes:** Pipeline and code documentation is located in the above repo's README.
 
 ## 4. Gene Set Variation Analysis (GSVA) and Figures
 - **Status:** Pending
@@ -52,7 +53,6 @@ Code included directly in this repository is covered by this repository's licens
   - Breast (PAM50): https://github.com/U4HELPP/SOP_breast-cancer-PAM50-classification
   - PDAC (PurIST): https://github.com/naimurashid/PurIST
   - CRC (CMS): https://github.com/peterawe/CMScaller 
-
 - **Contributor(s):** Amy Olex, Nina Dashti-Gibson
 - **Notes:** Need PDAC and CRC script that uses these packages. Breast PAM50 repo needs visibility changed to public before publication.
 
@@ -63,9 +63,10 @@ Code included directly in this repository is covered by this repository's licens
 - **Notes:** Nina will provide.
 
 ## 7. scRNA-Seq Analysis
-- **Status:** Needs organizing (alignment/clustering) / Included-pending-copy (cell filtering, merging, pseudobulk)
+- **Status:** Completed
 - **Location:**
   - Alignment, cell-level filtering, sample merging, ambient RNA adjustment and Pseudobulk PAM50 subtyping are described here: https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/scRNASeq
+  - The primary code repo is here: 
 - **Contributor(s):** Amy Olex
 - **Notes:** Organization completed
 
