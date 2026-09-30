@@ -26,13 +26,12 @@ Code included directly in this repository is covered by this repository's licens
 - **Notes:** Will share repo once it is polished.
 
 ## 2. Bulk RNA-Seq
-- **Status:** Linked (JAX pipeline) / Private (SOP) / Pending (PCA/PLS-DA scripts)
+- **Status:** Alignment/preprocessing documentation completed / Pending (PCA/PLS-DA scripts)
 - **Location:**
-  - Pipeline: https://github.com/TheJacksonLaboratory/jds-nf-workflows
-  - Processing SOP: https://github.com/U4HELPP/SOP_bulk-rnaseq-processing *(currently private — needs to be made public)*
+  - Pipeline Documentation: https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq
   - PCA plots / PLS-DA analysis script: TBD
 - **Contributor(s):** Mikail Bala, Amy Olex and Nina Dashti-Gibson
-- **Notes:** Nina will provide the PCA/PLS-DA scripts. SOP repo needs visibility changed to public before publication.
+- **Notes:** Nina will provide the PCA/PLS-DA scripts.
 
 ## 3. Proteomics Analysis
 - **Status:** Completed
