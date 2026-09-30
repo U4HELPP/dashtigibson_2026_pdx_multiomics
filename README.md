@@ -49,7 +49,7 @@ Code included directly in this repository is covered by this repository's licens
 ## 5. Molecular Subtyping
 - **Status:** Private (Breast) / Pending (PDAC)
 - **Location:**
-  - Breast (PAM50): https://github.com/U4HELPP/SOP_breast-cancer-PAM50-classification
+  - Breast (PAM50): Refer to the [Bulk-RNASeq README](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq). Subtyping script is located at https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/WorkstationScripts/06_PAM50_subtyping.R
   - PDAC (PurIST): https://github.com/naimurashid/PurIST
   - CRC (CMS): https://github.com/peterawe/CMScaller 
 - **Contributor(s):** Amy Olex, Nina Dashti-Gibson
