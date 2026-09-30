@@ -3,8 +3,8 @@
 **Repo/paths referenced:**
 - Alignment pipeline: [jds-nf-workflows (Jackson Laboratory)](https://github.com/TheJacksonLaboratory/jds-nf-workflows)
 - Protocol: [RNA-seq Step-by-Step Guide (VCU Bioinformatics Core)](https://github.com/VCU-Bioinformatics-Core/bioinformatics-epicenter-pipelines/wiki/RNA-seq-Step-by-Step-Guide)
-- Merge script: [`bulkRNASeq/merge_counts`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/bulkRNASeq/merge_counts) *(scripts taken from SOP v1.1 release)*
-- Downstream analysis code: [`bulkRNASeq/analysis`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/bulkRNASeq/analysis)
+- Merge script: [`bulk-rnaseq/merge_counts`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/merge_counts) *(scripts taken from SOP v1.1 release)*
+- Downstream analysis code: [`bulk-rnaseq/analysis`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/analysis)
 
 ## Purpose
 
@@ -15,8 +15,8 @@ Documents the processing steps used for bulk RNA-seq samples in the PDX multi-om
 | Step | Tool/Script | Input | Output |
 |---|---|---|---|
 | 1 | [jds-nf-workflows](https://github.com/TheJacksonLaboratory/jds-nf-workflows) *(JAX PDX Nextflow pipeline; see [protocol](https://github.com/VCU-Bioinformatics-Core/bioinformatics-epicenter-pipelines/wiki/RNA-seq-Step-by-Step-Guide) for step-by-step usage)* | Raw bulk RNA-seq FastQ files | QC reports, alignments, human/mouse gene and isoform count files |
-| 2 | [`merge_counts`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/bulkRNASeq/merge_counts) *(SOP v1.1 release)* | JAX per-sample count files (see directory structure below) | Single merged count matrix |
-| 3 | [`analysis`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/bulkRNASeq/analysis) | Merged count matrix | PCA plots, PLS-DA analysis, downstream results |
+| 2 | [`merge_counts`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/merge_counts) *(SOP v1.1 release)* | JAX per-sample count files (see directory structure below) | Single merged count matrix |
+| 3 | [`analysis`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/analysis) | Merged count matrix | PCA plots, PLS-DA analysis, downstream results |
 
 ## Merge Step — Required Directory Structure
 
@@ -48,6 +48,6 @@ jaxresults/
 |---|---|
 | jds-nf-workflows (Jackson Laboratory) | https://github.com/TheJacksonLaboratory/jds-nf-workflows |
 | RNA-seq Step-by-Step Guide (VCU Bioinformatics Core) | https://github.com/VCU-Bioinformatics-Core/bioinformatics-epicenter-pipelines/wiki/RNA-seq-Step-by-Step-Guide |
-| `bulkRNASeq/merge_counts` (SOP v1.1 release) | https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/bulkRNASeq/merge_counts |
-| `bulkRNASeq/analysis` | https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/bulkRNASeq/analysis |
+| `bulk-rnaseq/merge_counts` (SOP v1.1 release) | https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/merge_counts |
+| `bulk-rnaseq/analysis` | https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/analysis |
 | `merge_jax_counts.R` (WCCTR_RNASeq_Pipeline repo) | https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/WorkstationScripts/merge_jax_counts.R |
