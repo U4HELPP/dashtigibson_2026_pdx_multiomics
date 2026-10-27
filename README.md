@@ -23,7 +23,7 @@ Code included directly in this repository is covered by this repository's licens
 - **Status:** Private
 - **Location:** https://github.com/TYCGenomicsLab/publications/tree/main/2026_DashtiGibson_pancancer
 - **Contributor(s):** Katarzyna M. Tyc
-- **Notes:** The linked repository is currently private and will be made publicly available upon publication.
+- **Notes:** The linked repository is currently private and will be made public upon publication.
 
 ## 2. Bulk RNA-Seq Processing
 - **Status:** Included
@@ -38,26 +38,25 @@ Code included directly in this repository is covered by this repository's licens
 - **Contributor(s):** Alexa Barber
 - **Notes:** Pipeline and code documentation is located in the above repo's README.
 
-## 4. Comparative Multi-Omics Analysis
+## 4. Comparative Omics Analysis
 - **Status:** Included
 - **Location:** https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/comparative_omics
 - **Contributor(s):** Nina Dashti-Gibson
 - **Notes:** 
 
 ## 5. Molecular Subtyping
-- **Status:** Private (Breast) / Pending (PDAC and CRC)
+- **Status:** Private (Breast) / Included (PDAC and CRC)
 - **Location:**
   - Breast (PAM50): Refer to the [Bulk-RNASeq README](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq). Subtyping script is located at https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/WorkstationScripts/06_PAM50_subtyping.R
-  - PDAC (PurIST): 
-  - CRC (CMS): 
-- **Contributor(s):** Amy Olex, Nina Dashti-Gibson
-- **Notes:** Need PDAC and CRC script. Breast PAM50 repo needs visibility changed to public before publication.
+  - PDAC (PurIST) and CRC (CMS): https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/analysis
+- **Contributor(s):** Amy Olex and Nina Dashti-Gibson
+- **Notes:** Breast PAM50 repo needs visibility changed to public before publication.
 
 ## 6. High-Throughput Drug Screening Analysis
 - **Status:** Pending
-- **Location:** TBD
+- **Location:** https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/drug_screening
 - **Contributor(s):** Nina Dashti-Gibson
-- **Notes:** Nina will provide.
+- **Notes:** 
 
 ## 7. scRNA-Seq Analysis
 - **Status:** Included / Linked
@@ -65,7 +64,7 @@ Code included directly in this repository is covered by this repository's licens
   - Alignment, cell-level filtering, sample merging, ambient RNA adjustment and Pseudobulk PAM50 subtyping are described here: https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/scRNASeq
   - The primary code repo is here: https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/tree/v1.0.0/SingleCell
 - **Contributor(s):** Amy Olex
-- **Notes:** Organization completed
+- **Notes:** Organization completed.
 
 ## 8. Drug Response Prediction Modeling
 - **Status:** Linked
