@@ -48,7 +48,7 @@ jaxresults/
 |---|---|---|
 | 1 | [`06_PAM50_subtyping.R`](https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/WorkstationScripts/06_PAM50_subtyping.R) *(WCCTR_RNASeq_Pipeline repo)* | PAM50 classification |
 | 2 | [`purist_subtyping.R`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/blob/main/bulk-rnaseq/analysis/purist_subtyping.R) (using model and functions from https://github.com/naimurashid/PurIST) | PurIST classification |
-| 3 | [`cms_subtyping.R`] | CMS classification |
+| 3 | [`cms_subtyping.R`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/blob/main/bulk-rnaseq/analysis/cms_subtyping.R) | CMS classification |
 | 4 | [`3d_plsda_pca.R`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/blob/main/comparative_omics/3d_plsda_pca.R) | PLS-DA and PCA |
  
 
