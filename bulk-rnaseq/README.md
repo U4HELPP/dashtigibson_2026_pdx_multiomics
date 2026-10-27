@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Documents the processing steps used for bulk RNA-seq samples in the PDX multi-omics manuscript (*Pan-cancer comparisons of multi-omics data for therapeutic selection*, Dashti-Gibson et al.).
+Documents the processing steps used for bulk RNA-seq samples in the PDX multi-omics manuscript (*Cross-cancer comparisons of multi-omics data for therapeutic selection*, Dashti-Gibson et al.).
 
 ## Pipeline Overview
 
@@ -16,7 +16,7 @@ Documents the processing steps used for bulk RNA-seq samples in the PDX multi-om
 |---|---|---|---|
 | 1 | [jds-nf-workflows](https://github.com/TheJacksonLaboratory/jds-nf-workflows) *(JAX PDX Nextflow pipeline; see [protocol](https://github.com/VCU-Bioinformatics-Core/bioinformatics-epicenter-pipelines/wiki/RNA-seq-Step-by-Step-Guide) for step-by-step usage)* | Raw bulk RNA-seq FastQ files | QC reports, alignments, human/mouse gene and isoform count files |
 | 2 | [`merge_counts`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/merge_counts) *(SOP v1.1 release)* | JAX per-sample count files (see directory structure below) | Single merged count matrix |
-| 3 | [`analysis`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/analysis) | Merged count matrix | PAM50 subtyping, PCA plots, PLS-DA analysis, downstream results |
+| 3 | [`analysis`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/analysis) | Merged count matrix | Molecular subtyping, PCA and PLS-DA, downstream results |
 
 ## Merge Step — Required Directory Structure
 
@@ -47,6 +47,9 @@ jaxresults/
 | Step | Tool/Script | Description |
 |---|---|---|
 | 1 | [`06_PAM50_subtyping.R`](https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/WorkstationScripts/06_PAM50_subtyping.R) *(WCCTR_RNASeq_Pipeline repo)* | PAM50 classification |
+| 2 | [`purist_subtyping.R`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/blob/main/bulk-rnaseq/analysis/purist_subtyping.R) (using model and functions from https://github.com/naimurashid/PurIST) | PurIST classification |
+| 3 | [`cms_subtyping.R`] | CMS classification |
+| 4 | [`3d_plsda_pca.R`](https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/blob/main/comparative_omics/3d_plsda_pca.R) | PLS-DA and PCA |
  
 
 ## Referenced URLs
@@ -59,3 +62,4 @@ jaxresults/
 | `bulk-rnaseq/analysis` | https://github.com/U4HELPP/dashtigibson_2026_pdx_multiomics/tree/main/bulk-rnaseq/analysis |
 | `merge_jax_counts.R` (WCCTR_RNASeq_Pipeline repo) | https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/WorkstationScripts/merge_jax_counts.R |
 | `06_PAM50_subtyping.R` (WCCTR_RNASeq_Pipeline repo) | https://github.com/AmyOlex/WCCTR_RNASeq_Pipeline/blob/master/WorkstationScripts/06_PAM50_subtyping.R |
+| PurIST | https://github.com/naimurashid/PurIST |
