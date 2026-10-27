@@ -16,7 +16,7 @@ suppressPackageStartupMessages({
 
 # --- 2. Configuration & Paths ---
 EXPR_FILE  <- "25.11.20_HUMAN_U54_AllSamples_nf-JaxPDXNet_RSEM_Gene_TPM_U54manuscript.csv"
-META_FILE  <- "rnaseq_sample_metadata.csv"
+META_FILE  <- "sample_metadata.csv"
 OUTPUT_DIR <- "results"
 N_COMP     <- 3
 
@@ -81,9 +81,23 @@ rownames(expression_df) <- expression_df$gene_id
 expression_matrix       <- expression_df[, 3:ncol(expression_df)]
 X                       <- t(expression_matrix)
 
-# Filter matrix to match samples in metadata
-X           <- X[rownames(X) %in% metadata_df$Sample, ]
-metadata_df <- metadata_df[match(rownames(X), metadata_df$Sample), ]
+# Match matrix sample names (which begin with the metadata Sample IDs)
+meta_idx <- sapply(rownames(X), function(s_name) {
+  idx <- which(startsWith(s_name, metadata_df$Sample))
+  if (length(idx) > 0) return(idx[1]) else return(NA)
+})
+
+# Filter X and metadata to matched samples only
+keep_samples <- !is.na(meta_idx)
+if (sum(keep_samples) == 0) {
+  stop("Error: No expression matrix sample names start with any metadata Sample ID!")
+}
+
+X           <- X[keep_samples, ]
+metadata_df <- metadata_df[meta_idx[keep_samples], ]
+
+message(sprintf("Successfully matched %d / %d samples from expression matrix to metadata.", 
+                nrow(X), length(keep_samples)))
 
 # Process response labels
 metadata_df$Cancer_type <- tools::toTitleCase(metadata_df$Cancer_type)
@@ -121,7 +135,7 @@ plsda_df <- data.frame(
   Comp2 = plsda_result$variates$X[, 2],
   Comp3 = plsda_result$variates$X[, 3],
   Group = Y, 
-  SampleID = rownames(X)
+  SampleID = metadata_df$Sample
 )
 
 fig_plsda <- plot_3d_scatter(
@@ -139,11 +153,11 @@ pca_df <- data.frame(
   PC2 = pca_result$variates$X[, 2],
   PC3 = pca_result$variates$X[, 3],
   Group = Y, 
-  SampleID = rownames(X)
+  SampleID = metadata_df$Sample
 )
 
 fig_pca <- plot_3d_scatter(
-  df = pca_df, x_col = "PC1", y_col = "PC2", z_col = "PC3", # Fixed: set to "PC3"
+  df = pca_df, x_col = "PC1", y_col = "PC2", z_col = "PC3",
   group_col = "Group", sample_col = "SampleID", title_text = "3D PCA: RNA-seq",
   x_label = sprintf("PC 1 (%.1f%%)", pca_var[1] * 100),
   y_label = sprintf("PC 2 (%.1f%%)", pca_var[2] * 100),
