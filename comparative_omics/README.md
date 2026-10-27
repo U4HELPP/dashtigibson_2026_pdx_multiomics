@@ -1,4 +1,4 @@
-# Multi-Omics Comparative Analysis
+# Comparative Multi-Omics Analysis
 
 An R workflow for comparative multi-omics analysis of bulk RNA-seq and proteomics data. This repository includes scripts for dimensionality reduction (PCA and PLS-DA) and comparative Gene Set Variation Analysis (GSVA) across MSigDB Hallmark pathways, annotated by cancer type.
 
