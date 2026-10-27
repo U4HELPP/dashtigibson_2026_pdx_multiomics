@@ -16,7 +16,7 @@ suppressPackageStartupMessages({
 
 # --- 2. Configuration & Paths ---
 EXPR_FILE         <- "120325_PCA_Normalization_Averaged_renamed.csv"
-META_FILE         <- "proteomics_sample_metadata.csv"
+META_FILE         <- "sample_metadata.csv"
 OUTPUT_DIR        <- "results"
 N_COMP            <- 3
 SAMPLES_TO_REMOVE <- c("VCU-PC-064", "VCU-CO-023", "VCU-MC-130")
